@@ -1,6 +1,13 @@
 plugins {
     id 'com.android.application'
+
 }
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'dagger.hilt.android.plugin'
+apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -37,16 +44,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Hilt
-    def hilt_viewmodels = "1.0.0-alpha01"
-//    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
-//    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
 
-    //Hilt
-    implementation "com.google.dagger:hilt-android:2.28-alpha"
-//    kapt "com.google.dagger:hilt-android-compiler:2.28-alpha"
-    annotationProcessor "com.google.dagger:hilt-android-compiler:2.28-alpha"
-    //cek juga di build.gradle dependencies { classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version
+    def hilt_version = "2.28-alpha"
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+//    annotationProcessor "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    def hilt_viewmodels = "1.0.0-alpha01"
+    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
+    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
+//    annotationProcessor "androidx.hilt:hilt-compiler:$hilt_viewmodels"
+
 
     //Dagger2 (kita coba salah satu saja)
 //    implementation 'com.google.dagger:dagger-android:2.29'

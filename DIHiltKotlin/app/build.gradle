@@ -43,7 +43,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    //Hilt
+    //Hilt oke
     def hilt_viewmodels = "1.0.0-alpha01"
 //    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
 //    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
