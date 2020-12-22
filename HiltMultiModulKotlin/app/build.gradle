@@ -1,9 +1,8 @@
-
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-
 }
+
 //Hilt
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
@@ -16,7 +15,7 @@ android {
     buildToolsVersion "30.0.0"
 
     defaultConfig {
-        applicationId "com.example.dihiltkotlin"
+        applicationId "com.example.hiltmultimodulkotlin"
         minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
@@ -59,18 +58,5 @@ dependencies {
     // Hilt testing dependencies
     androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
     kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
-
-    def hilt_viewmodels = "1.0.0-alpha01"
-    implementation "androidx.hilt:hilt-lifecycle-viewmodel:$hilt_viewmodels"
-    kapt "androidx.hilt:hilt-compiler:$hilt_viewmodels"
-
-    // retrofit2
-    implementation 'com.squareup.retrofit2:retrofit:2.8.2'
-    implementation 'com.squareup.retrofit2:converter-gson:2.8.2'
-    implementation 'com.squareup.okhttp3:logging-interceptor:3.10.0'
-
-    // Library Room Database
-    implementation 'android.arch.persistence.room:runtime:2.2.5'
-    annotationProcessor 'android.arch.persistence.room:compiler:2.2.5'
 
 }
