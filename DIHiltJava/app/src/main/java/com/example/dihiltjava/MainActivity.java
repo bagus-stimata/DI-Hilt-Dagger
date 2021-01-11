@@ -117,6 +117,7 @@ class SomeOtherClass{
 }
 
 /**
+ *
  * Look at this
  */
 interface SomeInterface{
